@@ -5,7 +5,7 @@ spring:
     admin:
       context-path: /admin
 server:
-  port: 80701
+  port: 8070
 eureka:
   instance:
     hostname: eurekaserver
