@@ -38,7 +38,7 @@ spring:
         registration:
           keycloak:
             provider: keycloak
-            client-id: Spring-micro-gateway
+            client-id: spring-micro-gateway
             client-secret: 0iE444QmFyi9nBAy2AvLkW6UyMkvTYsF
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
@@ -49,8 +49,6 @@ spring:
             token-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/token
             user-info-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/userinfo
             jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
-            user-name-attribute: name
-            user-info-authentication-method: header
       resourceserver:
         jwt:
           jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
