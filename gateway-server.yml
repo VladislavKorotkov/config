@@ -40,7 +40,9 @@ spring:
             provider: keycloak
             client-id: spring-micro-gateway
             client-secret: 0iE444QmFyi9nBAy2AvLkW6UyMkvTYsF
-            authorization-grant-type: client_credentials
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+            scope: openid
         provider:
           keycloak:
             issuer-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}
