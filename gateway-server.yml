@@ -34,16 +34,6 @@ spring:
           - RewritePath=/license/(?<path>.*), /$\{path}
   security:
     oauth2:
-      client:
-        registration:
-          keycloak:
-            provider: keycloak
-            client-id: spring-micro-gateway
-            client-secret: 0iE444QmFyi9nBAy2AvLkW6UyMkvTYsF
-            authorization-grant-type: client_credentials
-        provider:
-          keycloak:
-            issuer-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}
       resourceserver:
         jwt:
           jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
