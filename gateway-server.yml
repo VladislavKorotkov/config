@@ -34,7 +34,7 @@ spring:
           - RewritePath=/license/(?<path>.*), /$\{path}
   security:
     oauth2:
-       client:
+      client:
         registration:
           keycloak:
             provider: keycloak
